@@ -1,0 +1,333 @@
+/*
+Table of Contents
+=================
+-- Header
+-- Navigation
+----- Pagination
+-- Search
+-- Content
+-- Home
+-- Items
+-- Collections
+-- ExhibitBuilder
+*/
+
+/* !---------- Header ---------- */
+
+header {
+    @include pie-clearfix;
+}
+
+#site-title {
+    @include span-columns (8 alpha, 12);
+    text-align: left;
+
+    &:after {
+        content: "";
+        display: block;
+        height: 0px;
+        clear: both;
+    }
+}
+
+
+
+/* !---------- Navigation --------- */
+
+nav.top {
+    /* mega menu list */
+    box-sizing: border-box;
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    .nav-menu {
+        display: block;
+        position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        z-index: 15;
+    }
+
+    /* a top level navigation item in the mega menu */
+    .nav-item {
+        list-style: none;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        position: relative;
+
+        a {
+          padding: rhythm(.5) 16px;
+        }
+    }
+
+    /* first descendant link within a top level navigation item */
+    .nav-item > a {
+        position: relative;
+        display: inline-block;
+        border: 1px solid transparent;
+    }
+
+    /* focus/open states of first descendant link within a top level
+       navigation item */
+    .nav-item > a:focus,
+    .nav-item > a:hover,
+    .nav-item > a.open {
+        border: 1px solid #dedede;
+        background-color: rgba(0,0,0,.15);
+    }
+
+    /* open state of first descendant link within a top level
+       navigation item */
+    .nav-item > a.open {
+        border-bottom: none;
+    }
+
+    /* sub-navigation panel */
+    .sub-nav {
+        position: absolute;
+        display: none;
+        border: 1px solid #dedede;
+        min-width: 200px;
+
+        &.open {
+            display: block;
+            z-index: 20;
+        }
+
+        ul {
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+            a {
+              width: 100%;
+              display: block;
+              padding: .25em 16px .25em 2em;
+              text-indent: -1em;
+
+              &:before {
+                font-family: "FontAwesome";
+                content: "\f101";
+                margin-right: .5em;
+              }
+            }
+            ul {
+              padding-left: 1em;
+            }
+        }
+
+        li {
+            display: block;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        a:focus, a:hover {
+            background-color: rgba(0,0,0,.05);
+            display:block;
+        }
+
+    }
+
+    [aria-haspopup="true"]:after {
+        font-family: "FontAwesome";
+        content: "\f0da";
+        margin-left: .5em;
+    }
+
+    [aria-haspopup="true"].open:after {
+        content: "\f0d7";
+    }
+
+    .mobile { display: none; }
+}
+
+
+    /* !---------- Pagination ---------- */
+
+    .pagination {
+        float: left;
+    }
+
+    #content nav .pagination_list {
+        @include leader(.25);
+    }
+
+
+
+/* !---------- Search ---------- */
+
+#search-container {
+    padding: 0;
+    @include span-columns(4 omega,12);
+    @include leader(1.25);
+    input { padding: rhythm(.3125) 8px; }
+}
+
+#search-results {
+    width: 100%;
+}
+
+#search-filters, #item-filters {
+    float: left;
+
+    li {
+        float: left;
+        ul {
+            display: inline;
+            padding: 0;
+            li {
+                float: none;
+            }
+        }
+    }
+}
+
+
+/* !---------- Content --------- */
+
+header, nav.top, #content, footer {
+    @include pie-clearfix;
+    @include prefix(1);
+    @include suffix(1);
+}
+
+.page #primary {
+    @include padding-leader(2);
+    @include padding-trailer(2);
+}
+
+#content #sort-links {
+    float: right;
+    text-align: center;
+}
+
+
+/* !---------- Home ---------- */
+
+#home #content {
+    #intro {
+        font-size: 1.5 * $base-font-size;
+        line-height: 1.5 * $base-line-height;
+          @include trailer(.75);
+
+        p { margin: 0; }
+    }
+
+    #featured-item {
+        @include trailer();
+        @include span-columns(4 alpha, 12);
+
+        .image {
+            display: inline-block;
+            width: 100%;
+            height: auto;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    & > div {
+        @include span-columns(8 omega, 12);
+    }
+}
+
+
+/* !---------- Items --------- */
+
+.items {
+    .item { clear: both;}
+
+    #advanced-search-form {
+
+        & > div {
+            @include span-columns(5 alpha, 8);
+            clear: both;
+        }
+
+        & > div:last-of-type {
+            width: auto;
+        }
+    }
+}
+
+.show, .exhibit-item-show {
+    #primary {
+        @include span-columns (5 alpha, 8);
+    }
+
+    #sidebar {
+        @include span-columns (3 omega, 8);
+
+    }
+}
+
+
+/* !---------- Collections ---------- */
+
+.collections.show {
+    #primary .element-set {
+        @include span-columns (5 alpha, 8);
+    }
+
+    #primary > div {
+        @include span-columns(3 omega, 8);
+        clear: right;
+    }
+
+    .item-img { margin-left: 0; }
+}
+
+/* !---------- ExhibitBuilder ---------- */
+
+.exhibits {
+    #primary,
+    #exhibit-blocks,
+    #exhibit-page-navigation {
+        @include span-columns(8 alpha, 12);
+        padding: 0 16px rhythm();
+    }
+
+    #exhibit-pages:not(.full)
+     {
+        width: columns(4);
+        display: inline-block;
+        @include box-sizing(border-box);
+    }
+}
+
+.exhibits #exhibit-pages.full ~ #exhibit-blocks,
+.exhibits #exhibit-pages.full ~ #exhibit-page-navigation {
+    width: 100%;
+}
+
+.exhibits.show #content {
+    .exhibit-page-nav {
+        & > li:first-child {
+            background-color: rgba(0,0,0,.1);
+            float: left;
+        }
+
+        & > li:nth-child(2) li:first-of-type { padding-left: 8px; }
+    }
+
+    #exhibit-page-navigation {
+        .exhibits-nav-prev { text-align: left; }
+
+        .exhibits-nav-next { text-align: right; }
+
+        & > div {
+            padding: 0;
+            width: 33%;
+        }
+
+        a, span { width: 100%; }
+
+    }
+
+}
