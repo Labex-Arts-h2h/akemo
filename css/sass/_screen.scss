@@ -19,10 +19,8 @@ Table of Contents
 -- ExhibitBuilder
 -- Simple Pages
 -- Winter Styles
--- Spring Styles
--- Summer Styles
--- Autumn Styles
--- Night Styles
+-- Labex Styles
+
 */
 
 
@@ -827,7 +825,6 @@ footer {
             h3 {
                 margin-top: 0;
                 font-weight: 300;
-                text-transform: uppercase;
             }
 
             img {
@@ -1525,379 +1522,111 @@ footer {
 }
 
 
-/* !---------- Spring Styles ---------- */
+/* !---------- Labex Styles ---------- */
 
-.spring {
-
-    body {
-        background-color: $spring-dark-green;
-        color: $spring-brown;
-    }
-
-    h1, #site-title a { color: $spring-dark-green; }
-
-    input[type=submit], button, .button, .show-advanced.button {  background-color: $spring-red; }
-
-    input[type=text], input[type=password], textarea {
-        background-color: #fff;
-        border: 1px solid #e8e8e8;
-    }
-
-    a {
-        &:link { color: $spring-link; }
-        &:visited { color: $spring-visited; }
-        &:hover, &:active, &:focus { color: $spring-active; }
-    }
-
-    header { background-color: $spring-light-green; }
-
-    nav.top {
-        background-color: $spring-green;
-
-        a:link, a:visited  { color: $spring-light-green; }
-        a:active, a:hover, a:focus  { color: $spring-white; }
-
-        .sub-nav {
-            background-color: $spring-green;
-            li {
-                & > a:link, & > a:visited { color: $spring-light-green; }
-                & > a:hover, & > a:focus { color: #fff; }
-              }
-
-            // a:hover, a:focus, a.open { color: #fff; }
-          }
-        }
-
-    #intro { color: $spring-link; }
-
-    #content,
-    #secondary-nav .current a,
-    #secondary-nav a.current,
-    .secondary-nav .current a,
-    .secondary-nav a.current,
-    .exhibit-section-nav .current a {
-        background-color: $spring-white;
-    }
-
-    #home #content > div {
-        border-color: $spring-red;
-    }
-
-    #content {
-        & > h1 { color: $spring-link; }
-
-        h2 { border-color: #e8e8e8; }
-
-        & > div, #primary > div, #sidebar > div,
-        #advanced-search-form > div, #exhibit-pages {
-            border-color: $spring-red;
-        }
-
-        #primary > div, #sidebar > div { background-color: #fff; }
-
-        .pagination_previous a, .pagination_next a {
-            background-color: $spring-green;
-        }
-
-        .pagination {
-            a:link, a:visited { color: $spring-light-green; }
-            a:hover, a:active { color: #fff; }
-        }
-
-        .pagination input[type=text] { border-color: $spring-light-green; }
-
-        nav .pagination_list {
-            background-color: $spring-green;
-        }
-
-        .items-nav {
-            a:link, a:visited { color: $spring-green; }
-            a:active, a:hover { color: $spring-hover-green; }
-        }
-
-        .item-img { border-color: #e8e8e8; }
-
-        div.hTagcloud {
-            border: 0;
-            background-color: transparent;
-            @include box-shadow(transparent 0 0 0);
-        }
-    }
-
-    #search-results th { background-color: $spring-red; }
-
-    #search-filters, #item-filters {
-        li { background-color: $spring-yellow; }
-    }
-
-    .page #content {
-        border-color: $spring-red;
-    }
-
-    footer {
-        background-color: $spring-dark-green;
-    }
-
-    footer p {
-        color:#000;
-    }
-
-    .exhibit-page-nav { background-color: $spring-red; }
-
-    .exhibit-page-nav .current, .exhibit-child-nav .current { background-color: rgba(0,0,0,.1); }
-
-    .exhibit-page-nav {
-        a:link, a:visited { color: $spring-yellow; }
-        a:hover, a:active { color: #fff; }
-    }
-
-    #exhibit-page-navigation {
-        a, span { background-color: #fff; }
-    }
-}
-
-
-/* !---------- Summer Styles ---------- */
-
-.summer {
+.labex {
 
     body {
-        background-color: $summer-dark-blue;
-        color: $summer-gray;
+        background-color: $labex-footer;
+        color: $labex-gray-text;
     }
 
-    h1, #site-title a { color: $summer-title-blue; }
+    h1, #site-title a { color:#859ca2; }
 
-    input[type=submit], button, .button, .show-advanced.button { background-color: $summer-blue; }
+    input[type=submit], button, .button, .show-advanced.button { background-color: $winter-slate; }
 
-    input[type=text], input[type=password], textarea {
-        background-color: $summer-light-blue;
-        color: $summer-title-blue;
-    }
+    input[type=text], input[type=password], textarea { background-color: $winter-light-gray; }
 
     a {
-        &:link { color: $summer-link-red; }
-        &:visited { color: $summer-visited-red; }
-        &:hover, &:active, &:focus { color: $summer-active-red; }
+        &:link { color: $labex-background-menu; }
+        &:visited { color: $labex-gray-text; }
+        &:hover, &:active, &:focus { color: $labex-hover; }
     }
 
-    header { background-color: #fff; }
+    header { background-color: $labex-header-background; }
 
     nav.top {
-        background-color: $summer-yellow;
-
-        li:hover a {
-          color: $summer-dark-blue;
-          }
-
-        a:link, a:visited  { color: $summer-title-blue; }
-        a:active, a:hover  { color: $summer-dark-blue; }
-
-        .nav-item > a:focus,
-        .nav-item > a:hover,
-        .nav-item > a.open {
-            background-color: rgba(0,0,0,.05);
-        }
-
-        .sub-nav {
-            background-color: $summer-yellow;
-            li {
-                & > a:link, & > a:visited { color: $summer-title-blue; }
-                & > a:hover { color: $summer-dark-blue; }
-              }
-            }
-        .sub-nav a:hover {
-            color: $summer-dark-blue;
-            background-color: rgba(0,0,0,.025);
-        }
-
-    }
-
-    #top-nav a:focus { color: $summer-dark-blue; }
-
-    #intro { color: $summer-link-red; }
-
-    #content,
-    #secondary-nav .current a,
-    #secondary-nav a.current,
-    .secondary-nav .current a,
-    .secondary-nav a.current,
-    .exhibit-section-nav .current a {
-        background-color: $summer-light-yellow;
-    }
-
-    #home #content > div {
-        border-color: $summer-blue;
-    }
-
-    #item h1 { color: $summer-link-red; }
-
-    #content {
-
-        & > h1 { color: $summer-link-red; }
-
-        h2 { border-color: $summer-light-red; }
-
-        & > div, #primary > div, #sidebar > div,
-        #advanced-search-form > div, #exhibit-pages {
-            border-color: $summer-blue;
-        }
-
-        #primary > div, #sidebar > div { background-color: #fff; }
-
-        .pagination_previous a, .pagination_next a {
-            background-color: $summer-blue;
-        }
-
-        .pagination {
-            a:link, a:visited { color: $summer-light-blue; }
-            a:hover, a:active { color: #fff; }
-        }
-
-        .pagination input[type=text] { border-color: $summer-light-blue; }
-
-        nav .pagination_list {
-            background-color: $summer-blue;
-        }
-
-        .items-nav {
-            a:link, a:visited { color: $summer-link-red; }
-            a:active, a:hover { color: $summer-active-red; }
-        }
-
-        .item-img { border-color: $summer-light-blue; }
-
-        div.hTagcloud {
-            border: 0;
-            background-color: transparent;
-            @include box-shadow(transparent 0 0 0);
-        }
-    }
-
-    #search-results th { background-color: $summer-blue; }
-
-    #search-filters, #item-filters {
-        li { background-color: #fff; }
-    }
-
-    .page #content {
-        border-color: $summer-blue;
-    }
-
-    footer {
-        background-color: $summer-dark-blue;
-    }
-
-    footer p {
-        color:#fff;
-    }
-
-    .exhibit-page-nav { background-color: $summer-blue; }
-
-    .exhibit-page-nav .current, .exhibit-child-nav .current { background-color: rgba(0,0,0,.1); }
-
-    .exhibit-page-nav {
-        a:link, a:visited { color: $summer-yellow; }
-        a:hover, a:active { color: #fff; }
-    }
-
-    #exhibit-page-navigation {
-        a, span { background-color: #fff; }
-    }
-
-    th, td { border-color: $summer-light-blue; }
-}
-
-
-/* !---------- Autumn Styles ---------- */
-
-.autumn {
-
-    body {
-        background-color: $autumn-dark-red;
-        color: $autumn-dark-red;
-    }
-
-    h1, #site-title a { color: $autumn-beige; }
-
-    input[type=submit], button, .button, .show-advanced.button { background-color: $autumn-dark-red; }
-
-    input[type=text], input[type=password], textarea {
-        background-color: $autumn-beige;
-        color: $autumn-brown;
-    }
-
-    a {
-        &:link { color: $autumn-link; }
-        &:visited { color: $autumn-visited; }
-        &:hover, &:active, &:focus { color: $autumn-active; }
-    }
-
-    header { background-color: $autumn-red; }
-
-    nav.top {
-        background-color: $autumn-dark-beige;
+        background-color: $labex-background-menu;
 
         li:hover a { color: #fff; }
 
-        a:link, a:visited  { color: $autumn-nav-link; }
-        a:active, a:hover, a.open  { color: #fff; }
+        a:link, a:visited  { color: $labex-text-link; }
+        a:active, a:hover, a:focus, a.open  { color: #fff; }
 
         .sub-nav {
-            background-color: $autumn-dark-beige;
+            background-color: lighten($labex-background-menu, 5%);
             li {
-                & > a:link, & > a:visited { color: $autumn-nav-link; }
-                & > a:hover { color:#fff; }
+                & > a:link, & > a:visited, & > a:active, & > a:hover, & > a:focus { color:$labex-link-visited; }
+
+                a:focus, a:hover { background-color: rgba(0,0,0,.15); }
             }
-            .sub-nav a:hover { color: #fff; }
         }
     }
 
-    #top-nav a:focus { color: #fff; }
+    // #top-nav a:focus { color: #fff; }
 
-    #intro { color: $autumn-brown; }
+    #intro { color: #fff; }
 
     #content,
     #secondary-nav .current a,
     #secondary-nav a.current,
     .secondary-nav .current a,
     .secondary-nav a.current,
-    .exhibit-section-nav .current a {
-        background-color: $autumn-beige;
+    .exhibit-section-nav .current a{
+        background-color: $labex-content-background;
     }
 
     #home #content > div {
-        border-color: $autumn-dark-beige;
+        border-color: $labex-border-top;
     }
 
     #content {
-        & > h1 { color: $autumn-brown; }
 
-        h2 { border-color: $autumn-gray; }
+        & > h1 { color: $labex-title-h1; }
 
-        #primary > div, #sidebar > div { background-color: #fff; }
+        h2 { border-color: $labex-line; }
 
-        #primary > h1 { color: $autumn-brown; }
+        div { border-color: $labex-title-blue; }
 
         & > div, #primary > div, #sidebar > div,
         #advanced-search-form > div, #exhibit-pages {
-            border-color: $autumn-dark-beige;
+            border-color: $labex-border-top;
         }
 
+        #primary > div, #sidebar > div { background-color: #fff; }
+
         .pagination_previous a, .pagination_next a {
-            background-color: $autumn-dark-red;
+            background-color: $labex-border-top;
+        }
+
+        .pagination {
+            color: black;
+
+            a:link, a:visited { color: $labex-text-link; }
+            a:hover, a:active { color: $labex-hover-link; }
         }
 
         .pagination input[type=text] {
-            border-color: #fff;
+            border-color: $labex-line;
             background-color: #fff;
         }
 
         nav .pagination_list {
-            background-color: $autumn-dark-red;
+            background-color: $labex-background-menu;
         }
 
-        .item-img { border-color: $autumn-gray; }
+        .items-nav, .secondary-nav,
+        #secondary-nav,
+        #outputs,
+        #exhibit-child-pages,
+        #login-links a  {
+            color: #fff;
+
+            a:link, a:visited { color: $labex-text-link; }
+            a:hover, a:active { color: #fff; }
+        }
+
+        .item-img { border-color: $labex-line; }
 
         div.hTagcloud {
             border: 0;
@@ -1906,30 +1635,30 @@ footer {
         }
     }
 
-    #search-results th { background-color: $autumn-dark-beige; }
+    #search-results th { background-color: $labex-border-top; }
 
     #search-filters, #item-filters {
-        li { background-color: #fff; }
+        li { background-color: $labex-text-link; }
     }
 
     .page #content {
-        border-color: $autumn-dark-beige;
+        border-color: $labex-border-top;
     }
 
     footer {
-        background-color: $autumn-dark-red;
+        background-color: $labex-footer;
     }
 
     footer p {
         color:#fff;
     }
 
-    .exhibit-page-nav { background-color: $autumn-dark-red; }
+    .exhibit-page-nav { background-color: $labex-border-top; }
 
     .exhibit-page-nav .current, .exhibit-child-nav .current { background-color: rgba(0,0,0,.1); }
 
     .exhibit-page-nav {
-        a:link, a:visited { color: $autumn-dark-beige; }
+        a:link, a:visited { color: $labex-text-link; }
         a:hover, a:active { color: #fff; }
     }
 
@@ -1938,182 +1667,3 @@ footer {
     }
 }
 
-
-/* !---------- Night Styles ---------- */
-
-.night {
-
-    body {
-        background-color: $night-darkest;
-        color: $night-text-on-darker;
-    }
-
-    h1 { color: $night-light; }
-
-    #site-title a { color: $night-link; }
-
-    input[type=submit], button, .button, .show-advanced.button {
-        background-color: $night-highlight;
-        color: $night-darker;
-    }
-
-    input[type=text], input[type=password], textarea {
-        background-color: $night-darker;
-        border: 1px solid $night-highlight;
-        color: $night-text-on-darker;
-    }
-
-    a {
-        &:link { color: $night-link; }
-        &:visited { color: $night-visited; }
-        &:hover, &:active, &:focus { color: $night-active; }
-    }
-
-    header { background-color: $night-darkest; }
-
-    nav.top {
-        background-color: $night-light;
-
-        li:hover a { color: $night-shadow; }
-
-        a:link, a:visited  { color: $night-visited-nav; }
-        a:active, a:hover  {  }
-
-        a:focus, a.open { color: $night-shadow; }
-
-        .sub-nav {
-            background-color: $night-highlight;
-            li {
-                & > a:link, & > a:visited { color: $night-link; }
-                & > a:active, & > a:hover, & > a:focus { color: $night-active; }
-            }
-        }
-    }
-
-    #intro { color: $night-light; }
-
-    #content,
-    #secondary-nav .current a,
-    #secondary-nav a.current,
-    .exhibit-section-nav .current a{
-        background-color: $night-content;
-    }
-
-    #advanced-form {
-        background-color: $night-darker;
-        color: $night-text-on-darker;
-        border-width: 0 1px 1px 1px;
-        border-style: solid;
-        border-color: $night-shadow;
-    }
-
-    #home #content > div {
-        border-color: $night-highlight;
-    }
-
-    #home #content div .items-list .item {
-        border-top: 1px solid $night-shadow;
-
-        &:first-of-type {
-            border-top: 0;
-        }
-    }
-
-
-    #home #content > div img, .items.show #itemfiles a,
-    #home #content .item, #home #content div .view-items-link,
-    .collections #content div .view-items-link {
-        border-color: $night-shadow;
-    }
-
-    #content {
-        & > h1 { color: $night-light; }
-
-        h2 { border-color: $night-shadow; }
-
-        & > div, #primary > div, #sidebar > div,
-        #advanced-search-form > div, #exhibit-pages {
-            border-color: $night-highlight;
-            background-color: $night-darker;
-        }
-
-        #primary > div, #sidebar > div,
-        .item-pagination li { background-color: $night-darker; }
-
-        .pagination_previous a, .pagination_next a {
-            background-color: $night-darker;
-        }
-
-        nav .pagination_list {
-            background-color: $night-darker;
-        }
-
-        .pagination_previous a, .pagination_next a {
-            background-color: $night-darker;
-        }
-
-        .item-img { border-color: $night-shadow; }
-
-        div.hTagcloud {
-            border: 0;
-            background-color: transparent;
-            @include box-shadow(transparent 0 0 0);
-        }
-
-    }
-
-    .login #content form {
-        border-color: $night-highlight;
-        background-color: $night-darker;
-    }
-
-    #search-results th {
-        background-color: $night-highlight;
-        color: $night-light;
-    }
-
-    #search-results td { background-color: $night-darker; }
-
-    #search-filters, #item-filters {
-        li { background-color: $night-highlight; }
-    }
-
-    .page #content {
-        border-color: $night-highlight;
-    }
-
-    .page #primary { background-color: $night-darker; }
-
-    footer {
-        background-color: transparent;
-    }
-
-    footer p {
-        color: $night-text-on-darker;
-    }
-
-    .exhibit-page-nav { background-color: $night-darker; }
-
-    .exhibit-page-nav .current, .exhibit-child-nav .current { background-color: rgba(255,255,255,.1); }
-
-    #exhibit-page-navigation {
-        a, span { background-color: $night-darker; }
-    }
-
-    .exhibits #exhibit-pages > ul > li:not(:last-of-type) {
-        border-color: $night-shadow;
-    }
-
-    .exhibits.show #content .exhibit-page-nav > li:nth-child(3) {
-        background-color: rgba(255,255,255,.08);
-    }
-
-    .exhibits.tags #content p:only-of-type {
-        background-color: $night-darker;
-        border-color: $night-highlight;
-    }
-
-    #content div.hTagcloud ul li { background-color: $night-darker; }
-
-    td, th { border-color: $night-content; }
-}
