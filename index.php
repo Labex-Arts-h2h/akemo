@@ -14,6 +14,11 @@
 
 <?php fire_plugin_hook('public_content_top', array('view'=>$this)); ?>
 
+<?php if (get_theme_option('homepage_favorite_items') !== '0'): ?>
+    <?php $favorites = get_theme_option('homepage_favorite_items'); ?>
+    <?php echo get_items($favorites); ?>
+<?php endif; ?>
+
 <?php if (get_theme_option('Display Featured Collection') !== '0'): ?>
 <!-- Featured Collection -->
 <div id="featured-collection">

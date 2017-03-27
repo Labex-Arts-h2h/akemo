@@ -20,4 +20,16 @@ function footer_logo($number, $width)
     }
 }
 
+function get_items($listId) {
+	$itemTable = get_db()->getTable('Item');
+	$select = $itemTable->getSelect()->where("items.id IN (".$listId.")");
+	$itemObjects = $itemTable->fetchObjects($select);
+	$html = '';
+	foreach ($itemObjects as $itemObject) {
+		$html .= get_view()->partial('items/image.php', array('item' => $itemObject));
+		release_object($itemObject);
+	}
+	return $html;
+}
+
 ?>
