@@ -11,7 +11,10 @@
             <?php endif; ?>
         </div>
 
-        <p><?php echo __('Proudly powered by <a href="http://omeka.org">Omeka</a>.'); ?></p>
+        <?php echo footer_logo("one", 150); ?>
+        <?php echo footer_logo("two", 150); ?>
+        <?php echo footer_logo("three", 150); ?>
+        <?php echo footer_logo("four", 150); ?>
 
     <?php fire_plugin_hook('public_footer', array('view' => $this)); ?>
 
